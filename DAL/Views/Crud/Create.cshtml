@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Signup";
+}
+@model std_details
+<html>
+    <body>
+        <form method="post">
+            <input asp-for="id" hidden/>
+<input asp-for="name" placeholder="Name" />
+<br/>
+<input asp-for="father_name" placeholder="Fathername" />
+        <br />
+<input asp-for="email" placeholder="Email" />
+        <br />
+<input asp-for="password"  placeholder="password"/>
+        <br />
+        <input type="submit"/>
+</form>
+    </body>
+</html>
+

@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+}
+@model std_details;
+
+<form method="post">
+    <table>
+        <thead>
+             <tr>
+           
+        <th>
+        Name
+        </th>
+        <th>
+        Father Name
+
+        </th>
+        <th>
+         Email
+        </th>
+        <th>
+        Password
+        </th>
+        <th>
+        
+        </th>
+          <th>
+        
+        </th>
+            
+    </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>
+            <input asp-for="name" value="@Model.name" /></td>
+        <td><input asp-for="father_name" value="@Model.father_name" /></td>
+    <td><input asp-for="email" value="@Model.email" /></td>
+         <td><input asp-for="password" value="@Model.password" /></td
+    <td><input type="submit" value="Update" asp-action="update" asp-controller="Crud" asp-route-Model="@Model"/></td>
+    </tr>
+        </tbody>
+    </table>
+  
+</form>
+
+
+

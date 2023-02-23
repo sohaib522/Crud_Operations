@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model std_details
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <form method="post" >
+    <input asp-for="email" placeholder="Email" />
+    <br/>
+        <input asp-for="password" placeholder=" Password" />
+        <br/>
+        <br/>
+        <input type="submit"/>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Crud" asp-action="Create">Create New Account</a>
+        <br/>
+        <a href="" >Forgot Password ?</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Crud" asp-action="Index">Show Data</a>
+        
+    </form>
+</div>

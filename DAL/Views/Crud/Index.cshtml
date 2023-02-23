@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model IEnumerable<std_details>
+
+<form method="post">
+<table class="table table-bordered table-striped style="width :"100%">
+    <thead>
+    <tr>
+            <th>
+                Id
+            </th>
+        <th>
+        Name
+        </th>
+        <th>
+        Father Name
+
+        </th>
+        <th>
+         Email
+        </th>
+        <th>
+        Password
+        </th>
+        <th>
+        
+        </th>
+            <th>
+              
+            </th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td>
+                    @obj.id
+                </td>
+                <td>
+                    @obj.name
+                </td>
+                <td>
+                    @obj.father_name
+                </td>
+                <td>
+                    @obj.email
+                </td>
+                     <td>
+                    @obj.password
+                    </td>
+                <td>
+                    <a type="submit" asp-controller="Crud" asp-action="Edit" asp-route-id="@obj.id">Edit </a>
+                </td>
+                    <td>
+                    <a type="submit" asp-controller="Crud" asp-action="Delete" asp-route-id="@obj.id">Delete</a>
+                    </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</form>
+
