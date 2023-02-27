@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2a5WvpM+3dtG1Bd+pgvtFoKiFbQxom5jpxHP9A/PngSH3rE63CX2DG7MD0md2y7pnMl9CDZleqtBA1BuwEXgbg==",
+  "dgSpecHash": "24mW+QTecISWvVkyY7mKuN2kRuC1oNlm6++xTGJwsWAiOa5uRY2iObT2PrRCRYvnUEZxeJd9jW8adzSB1ss+rw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sohaib ZQ\\source\\repos\\DAL\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Sohaib ZQ\\.nuget\\packages\\bootstrap\\5.2.3\\bootstrap.5.2.3.nupkg.sha512",
     "C:\\Users\\Sohaib ZQ\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Sohaib ZQ\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Sohaib ZQ\\.nuget\\packages\\jquery\\3.6.3\\jquery.3.6.3.nupkg.sha512",
     "C:\\Users\\Sohaib ZQ\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Sohaib ZQ\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\Sohaib ZQ\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",

@@ -4,11 +4,16 @@
 }
 
 @model IEnumerable<std_details>
+<style>
+    table.table td .add {
+        display: none;
+    }
+</style>
 
 <form method="post">
-<table class="table table-bordered table-striped style="width :"100%">
+<table class="table table-bordered" style="width :"100%">
     <thead>
-    <tr>
+    <tr >
             <th>
                 Id
             </th>
@@ -28,15 +33,13 @@
         <th>
         
         </th>
-            <th>
-              
-            </th>
+           
     </tr>
     </thead>
     <tbody>
         @foreach(var obj in Model)
         {
-            <tr>
+            <tr id=@obj.id>
                 <td>
                     @obj.id
                 </td>
@@ -52,15 +55,117 @@
                      <td>
                     @obj.password
                     </td>
-                <td>
-                    <a type="submit" asp-controller="Crud" asp-action="Edit" asp-route-id="@obj.id">Edit </a>
-                </td>
+
                     <td>
-                    <a type="submit" asp-controller="Crud" asp-action="Delete" asp-route-id="@obj.id">Delete</a>
+                        <a type="submit" id="@obj.id" class="add" data-toggle="tooltip">Add </a>
+                        <a type="submit" id="@obj.id" class="edit" data-toggle="tooltip">Edit </a>
+                        <a type="submit" class="delete" data-toggle="tooltip" onclick="Delete()" id="@obj.id">Delete</a>
                     </td>
             </tr>
         }
     </tbody>
 </table>
 </form>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+          function Delete()
+          { var test;
+          $(document).ready(function(){
+          $("a").click(function(){ var bid=$(this).attr('id');
+          
+          
+          $.ajax({
+              url : "/Crud/Delete",
+              method : "POST",
+              data : {id : bid},
+              success: function (result)
+              {
+                  
+                     
+                  
+              
+              },
+              error  : function (xhr,status,error){
+                  test=false;
+
+              }
+
+          });
+              
+                var row = $(this).closest("tr");
+                row.remove();
+             
+              
+            });
+           
+          });
+         
+      
+        
+          }
+    $(document).ready(function () { 
+        $('[data-toggle="tooltip"]').tooltip();
+        var actions = $("table td:last-child").html();
+        $(document).on("click", ".add", function () {
+            var updated_data=[];
+            var bid = $(this).attr('id');
+            var empty = false;
+            var input = $(this).parents("tr").find('input[type="text"]');
+            input.each(function () {
+                if (!$(this).val()) {
+                    $(this).addClass("error");
+                    empty = true;
+                } else {
+                    updated_data.push($(this).val().replace(/\s+/g," "));
+                    $(this).removeClass("error");
+                }
+                
+            }
+            );
+            $(this).parents("tr").find(".error").first().focus();
+            if (!empty) {
+                input.each(function () {
+                    $(this).parent("td").html($(this).val());
+                });
+                $(this).parents("tr").find(".add, .edit").toggle();
+                $(".add-new").removeAttr("disabled");
+            }
+            console.log(typeof updated_data);
+
+            var obj = {
+                 id : bid,
+                 email : updated_data[2],
+                 name : updated_data[0],
+                 father_name : updated_data[1],
+                 password : updated_data[3]
+            };
+            console.log(obj);
+            $.ajax({
+                url: "/Crud/Update",
+                method: "POST",
+                data: obj,
+                success: function (result) {
+
+
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+
+                }
+
+            });
+        });
+    
+    $(document).on("click", ".edit", function () {
+        $(this).parents("tr").find("td:not(:first-child,:last-child)").each(function () {
+            
+            $(this).html('<input type="text" class="form-control"  value="' + $(this).text() + '">');
+
+        });
+        $(this).parents("tr").find(".add, .edit").toggle();
+        $(".add-new").attr("disabled", "disabled");
+    });
+    });
+</script>
+
 

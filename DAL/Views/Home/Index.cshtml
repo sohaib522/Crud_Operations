@@ -4,19 +4,34 @@
 @model std_details
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <form method="post" >
-    <input asp-for="email" placeholder="Email" />
-    <br/>
-        <input asp-for="password" placeholder=" Password" />
+    <h1 class="display-4">Crud Operations</h1>
+    <br />
+    <br />
+    <form method="post" asp-action="user_auth">
+        <div class="form-group">
+            <div class="row d-flex justify-content-center">
+            
+            <input type="email" asp-for="email" style="width : 25%" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+           </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+        <div class="row d-flex justify-content-center">
+
+            
+            <input type="password" asp-for="password" style="width : 25%" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        </div>
+        <br />
+        <br />
+        <button type="submit" class="btn btn-outline-primary">Log In</button>
+        <br />
+        <br />
+        <button type="submit" class="btn btn-outline-primary" asp-controller="Crud" asp-action="Create">Create New Account</button>
         <br/>
         <br/>
-        <input type="submit"/>
-        <a class="nav-link text-dark" asp-area="" asp-controller="Crud" asp-action="Create">Create New Account</a>
-        <br/>
-        <a href="" >Forgot Password ?</a>
-        <a class="nav-link text-dark" asp-area="" asp-controller="Crud" asp-action="Index">Show Data</a>
-        
+        <a href="">Forgot Password ?</a>
+       
     </form>
 </div>

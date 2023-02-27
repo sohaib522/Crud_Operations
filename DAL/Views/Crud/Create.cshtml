@@ -1,22 +1,56 @@
 ﻿
 @{
-    ViewData["Title"] = "Signup";
+    ViewData["Title"] = "Create_Account_view";
 }
-@model std_details
-<html>
-    <body>
-        <form method="post">
-            <input asp-for="id" hidden/>
-<input asp-for="name" placeholder="Name" />
-<br/>
-<input asp-for="father_name" placeholder="Fathername" />
+@model std_details;
+<div class="text-center">
+    <h1 class="display-4">Crud Operations</h1>
+    <br />
+    <br />
+    <form method="post">
+     
+          <div class="form-group">
+            <div class="row d-flex justify-content-center">
+
+                <input type="text" asp-for="name" style="width : 25%" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter Name">
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="form-group">
+            <div class="row d-flex justify-content-center">
+
+                <input type="text" asp-for="father_name" style="width : 25%" class="form-control" id="father_name" aria-describedby="emailHelp" placeholder="Enter Father Name">
+                <span asp-validation-for="father_name" class="text-danger"></span>
+            </div>
+        </div>
         <br />
-<input asp-for="email" placeholder="Email" />
         <br />
-<input asp-for="password"  placeholder="password"/>
+        <div class="form-group">
+            <div class="row d-flex justify-content-center">
+
+                <input type="email" asp-for="email" style="width : 25%" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                   <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+
+        </div>
         <br />
-        <input type="submit"/>
-</form>
-    </body>
-</html>
+        <br />
+        <div class="form-group">
+            <div class="row d-flex justify-content-center">
+
+
+                <input type="password" asp-for="password" style="width : 25%" class="form-control" id="password" placeholder="Enter Password">
+                 <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <button type="submit" class="btn btn-outline-primary">Create Account</button>
+       S
+        
+
+    </form>
+</div>
 

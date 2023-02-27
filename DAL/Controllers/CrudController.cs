@@ -9,17 +9,23 @@ namespace DAL.Controllers
         public CrudController(Application_db_context db) {
             _db = db;
         }
-        public IActionResult Create()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Create(std_details obj)
-        {
-            _db.std_Detail.Add(obj);
-            _db.SaveChanges();
        
-            return View();
+        
+        public IActionResult Create(std_details obj)
+        {   
+             if (ModelState.IsValid)
+                {
+                    _db.std_Detail.Add(obj);
+                    _db.SaveChanges();
+                    return RedirectToAction("Index");
+
+                }
+                else
+                {
+                 return View();
+                }
+            
+ 
         }
         public IActionResult Index()
         {
@@ -38,16 +44,16 @@ namespace DAL.Controllers
             }
            
         }
-        public IActionResult Update(std_details obj)
-        { if (obj != null)
-            {   _db.std_Detail.Update(obj);
+        [HttpPost]
+        public JsonResult Update(std_details obj)
+        {
+    
+               
+                _db.std_Detail.Update(obj);
                 _db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                return NotFound();  
-            }
+                return Json("true");
+            
+            
         }
         public IActionResult Delete(int id)
         {
@@ -56,8 +62,8 @@ namespace DAL.Controllers
             if (obj != null)
             {
                 _db.std_Detail.Remove(obj);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+                 _db.SaveChanges();
+                return Ok();
             }
             else
             {

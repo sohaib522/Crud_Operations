@@ -14,21 +14,21 @@ namespace DAL.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Index(std_details obj)
+        public IActionResult user_auth(std_details obj)
             
         {
-            var id = 3;
-            var Email=_db.std_Detail.Find("sadia@gmail.com");
-            //var password = _db.std_Detail.Find(obj.password);
-            if (Email != null)
-            {
+            bool user = _db.std_Detail.Any(c=>c.email.Equals(obj.email) && c.password==obj.password);
+            if(user.Equals(true)){
                 return RedirectToAction("Index", "Crud");
-
             }
-            else
-            {
-                return NotFound();
-            }
+            return NotFound();
+            
+            
+           
+        }
+        public IActionResult test()
+        {
+            return View();
         }
 
 
