@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3J1ZFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sohaib ZQ/source/repos/DAL/DAL/Views/Crud/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3J1ZFxEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Sohaib ZQ/source/repos/DAL/DAL/Views/Crud/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3J1ZFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,26 +30,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Sohaib ZQ/source/repos/DAL/DAL/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Sohaib ZQ/source/repos/DAL/DAL/Views/Home/info.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmZvLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Sohaib ZQ/source/repos/DAL/DAL/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Sohaib ZQ/source/repos/DAL/DAL/Views/Home/RetriveData.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXRyaXZlRGF0YS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Sohaib ZQ/source/repos/DAL/DAL/Views/Home/test.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0ZXN0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Sohaib ZQ/source/repos/DAL/DAL/Views/Home/user_auth.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx1c2VyX2F1dGguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Sohaib ZQ/source/repos/DAL/DAL/Views/Shared/Error.cshtml]

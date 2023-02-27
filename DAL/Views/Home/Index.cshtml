@@ -1,17 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@model std_details
+@model User_Auth;
 
 <div class="text-center">
     <h1 class="display-4">Crud Operations</h1>
     <br />
     <br />
-    <form method="post" asp-action="user_auth">
+    <form method="post" >
         <div class="form-group">
             <div class="row d-flex justify-content-center">
             
-            <input type="email" asp-for="email" style="width : 25%" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" asp-for="email" style="width : 25%" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <span asp-validation-for="email" class="text-danger"></span>
            </div>
         </div>
         <br />
@@ -20,7 +21,8 @@
         <div class="row d-flex justify-content-center">
 
             
-            <input type="password" asp-for="password" style="width : 25%" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input type="password" asp-for="password" style="width : 25%" class="form-control" id="password" placeholder="Password">
+                <span asp-validation-for="password" class="text-danger"></span>
         </div>
         </div>
         <br />
